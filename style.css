@@ -1,4 +1,4 @@
-/* Reset & basic styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +12,20 @@ body {
     color: #333;
 }
 
-/* Navbar */
+
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #222;
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(30, 176, 208, 0.2);
 }
 
 .logo {
@@ -42,14 +46,13 @@ body {
 
 /* Sections */
 .section {
-    padding: 60px 20px;
+    padding: 100px 20px 60px; /* extra top padding for fixed navbar */
     text-align: center;
 }
 
 .hero {
     background: linear-gradient(to right, #00bcd4, #2196f3);
     color: white;
-  
 }
 
 .projects {
@@ -69,7 +72,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -93,12 +96,13 @@ body {
     padding: 20px;
 }
 
+/* Profile image */
 .profile-wrapper {
     display: inline-block;
     padding: 6px;
     border: 3px solid #fff;
     border-radius: 50%;
-    background: linear-gradient(135deg, #00bcd4, #2196f3); /* optional fancy border */
+    background: linear-gradient(135deg, #00bcd4, #2196f3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
